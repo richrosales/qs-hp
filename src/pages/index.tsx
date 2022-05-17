@@ -36,7 +36,7 @@ export default function HomePage() {
         Toggle Grid
       </button>
 
-      <main className={isActive ? 'show-grid' : null}>
+      <main className={isActive ? 'show-grid' : undefined}>
         <div className='bg-white'>
           <div className='container relative flex flex-col items-center justify-center min-h-screen text-left'>
             <section className='section grid-overlay'>
