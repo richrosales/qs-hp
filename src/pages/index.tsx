@@ -22,15 +22,24 @@ import Seo from '@/components/Seo';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const [isActive, setActive] = React.useState(false);
+
+  const toggleClass = () => {
+    setActive(!isActive);
+  };
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
-      <main>
-        <div className='bg-white show-grid'>
-          <div className='container flex flex-col items-center justify-center min-h-screen text-left'>
-            <section className='section'>
+      <button className='btn-toggle' onClick={toggleClass}>
+        Toggle Grid
+      </button>
+
+      <main className={isActive ? 'show-grid' : null}>
+        <div className='bg-white'>
+          <div className='container relative flex flex-col items-center justify-center min-h-screen text-left'>
+            <section className='section grid-overlay'>
               <div className='w-full section-heading'>
                 <h2>H2 Heading</h2>
                 <p className='body-copy'>
@@ -41,7 +50,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className='grid grid-cols-12 gap-14'>
-                <article className='col-span-8 card'>
+                <article className='col-span-12 card lg:col-span-8'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_2up_card_lg.jpg'
@@ -59,7 +68,7 @@ export default function HomePage() {
                     <button className='btn-shop'>Shop Now</button>
                   </div>
                 </article>
-                <article className='col-span-4 card'>
+                <article className='col-span-12 card lg:col-span-4'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_2up_card_sm.jpg'
@@ -90,7 +99,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className='grid grid-cols-12 gap-14'>
-                <article className='col-span-6 card'>
+                <article className='col-span-12 card lg:col-span-6'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_2up_card.jpg'
@@ -108,7 +117,7 @@ export default function HomePage() {
                     <button className='btn-shop'>Shop Now</button>
                   </div>
                 </article>
-                <article className='col-span-6 card'>
+                <article className='col-span-12 card lg:col-span-6'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_2up_card.jpg'
@@ -139,7 +148,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className='grid grid-cols-12 gap-14'>
-                <article className='relative col-span-4 card card-tile'>
+                <article className='relative col-span-12 card card-tile lg:col-span-4'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_3up_card.jpg'
@@ -155,7 +164,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </article>
-                <article className='relative col-span-4 card card-tile'>
+                <article className='relative col-span-12 card card-tile lg:col-span-4'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_3up_card.jpg'
@@ -171,7 +180,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </article>
-                <article className='relative col-span-4 card card-tile'>
+                <article className='relative col-span-12 card card-tile lg:col-span-4'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_3up_card.jpg'
@@ -204,7 +213,7 @@ export default function HomePage() {
             </div>
             <div className='pb-48 ocean-bg'>
               <div className='container grid grid-cols-12 gap-14'>
-                <article className='relative col-span-3 card'>
+                <article className='relative col-span-12 card lg:col-span-3'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_3up_with_background_card_sm_1.jpg'
@@ -222,7 +231,7 @@ export default function HomePage() {
                     <button className='btn-shop'>Shop Now</button>
                   </div>
                 </article>
-                <article className='card relative col-span-6 -mt-[4.5rem]'>
+                <article className='card relative col-span-12 lg:col-span-6 lg:-mt-[4.2rem]'>
                   <div className='relative card-img '>
                     <img
                       src='/images/desktop_3up_with_background_card_lg@2x.jpg'
@@ -240,7 +249,7 @@ export default function HomePage() {
                     <button className='btn-shop'>Shop Now</button>
                   </div>
                 </article>
-                <article className='relative col-span-3 card'>
+                <article className='relative col-span-12 card lg:col-span-3'>
                   <div className='relative card-img'>
                     <img
                       src='/images/desktop_3up_with_background_card_sm.jpg'
