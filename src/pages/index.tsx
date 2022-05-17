@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
+// import Image from 'next/image';
+// import ArrowLink from '@/components/links/ArrowLink';
+// import ButtonLink from '@/components/links/ButtonLink';
+// import UnderlineLink from '@/components/links/UnderlineLink';
+// import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 
 /**
@@ -14,7 +15,7 @@ import Seo from '@/components/Seo';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-import Vercel from '~/svg/Vercel.svg';
+// import Vercel from '~/svg/Vercel.svg';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -27,47 +28,240 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <Vercel className='text-5xl' />
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                See the repository
-              </ArrowLink>
-            </p>
-
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
-
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
+        <div className='bg-white show-grid'>
+          <div className='container flex flex-col items-center justify-center min-h-screen text-left'>
+            <section className='section'>
+              <div className='w-full section-heading'>
+                <h2>H2 Heading</h2>
+                <p className='body-copy'>
+                  Body Copy - Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nullam vel fringilla nulla, ut ullamcorper purus.
+                  Vivamus sed imperdiet ante. Cras in rutrum est. Aenean lacinia
+                  nibh.
+                </p>
+              </div>
+              <div className='grid grid-cols-12 gap-14'>
+                <article className='col-span-8 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_2up_card_lg.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='relative card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+                <article className='col-span-4 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_2up_card_sm.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='relative card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <section className='section'>
+              <div className='w-full section-heading'>
+                <h2>H2 Heading</h2>
+                <p className='body-copy'>
+                  Body Copy - Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nullam vel fringilla nulla, ut ullamcorper purus.
+                  Vivamus sed imperdiet ante. Cras in rutrum est. Aenean lacinia
+                  nibh.
+                </p>
+              </div>
+              <div className='grid grid-cols-12 gap-14'>
+                <article className='col-span-6 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_2up_card.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='relative card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+                <article className='col-span-6 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_2up_card.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='relative card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <section className='section'>
+              <div className='w-full section-heading'>
+                <h2>H2 Heading</h2>
+                <p className='body-copy'>
+                  Body Copy - Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nullam vel fringilla nulla, ut ullamcorper purus.
+                  Vivamus sed imperdiet ante. Cras in rutrum est. Aenean lacinia
+                  nibh.
+                </p>
+              </div>
+              <div className='grid grid-cols-12 gap-14'>
+                <article className='relative col-span-4 card card-tile'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_3up_card.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='card-overlay'>
+                    <div className='card-body'>
+                      <h4>Lorem Ipsum Sit Dolor Amet</h4>
+                      <button className='btn-shop'>Shop Now</button>
+                    </div>
+                  </div>
+                </article>
+                <article className='relative col-span-4 card card-tile'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_3up_card.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='card-overlay'>
+                    <div className='card-body'>
+                      <h4>Lorem Ipsum Sit Dolor Amet</h4>
+                      <button className='btn-shop'>Shop Now</button>
+                    </div>
+                  </div>
+                </article>
+                <article className='relative col-span-4 card card-tile'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_3up_card.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='card-overlay'>
+                    <div className='card-body'>
+                      <h4>Lorem Ipsum Sit Dolor Amet</h4>
+                      <button className='btn-shop'>Shop Now</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
           </div>
-        </section>
+          <section className='mt-16 section bg-gray'>
+            <div className='container'>
+              <div className='w-full section-heading'>
+                <h2>H2 Heading</h2>
+                <p className='body-copy'>
+                  Body Copy - Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nullam vel fringilla nulla, ut ullamcorper purus.
+                  Vivamus sed imperdiet ante. Cras in rutrum est. Aenean lacinia
+                  nibh.
+                </p>
+              </div>
+            </div>
+            <div className='pb-48 ocean-bg'>
+              <div className='container grid grid-cols-12 gap-14'>
+                <article className='relative col-span-3 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_3up_with_background_card_sm_1.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='centered card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+                <article className='card relative col-span-6 -mt-[4.5rem]'>
+                  <div className='relative card-img '>
+                    <img
+                      src='/images/desktop_3up_with_background_card_lg@2x.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='card-body centered'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+                <article className='relative col-span-3 card'>
+                  <div className='relative card-img'>
+                    <img
+                      src='/images/desktop_3up_with_background_card_sm.jpg'
+                      alt='Picture of the author'
+                      width='100%'
+                      height='auto'
+                    />
+                  </div>
+                  <div className='centered card-body'>
+                    <h4>H4 Heading</h4>
+                    <p className='body-copy-sm'>
+                      Body Copy SM - Lorem ipsum dolor sit amet, consectetur
+                      adipiscing
+                    </p>
+                    <button className='btn-shop'>Shop Now</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
     </Layout>
   );
